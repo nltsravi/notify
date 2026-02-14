@@ -25,3 +25,10 @@ jobs:
 
       - name: Run daily check
         run: npm run console
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          TO_EMAIL_LIST: ${{ secrets.TO_EMAIL_LIST }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}

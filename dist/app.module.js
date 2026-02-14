@@ -12,14 +12,16 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const csv_service_1 = require("./csv.service");
 const pinger_service_1 = require("./pinger.service");
+const config_1 = require("@nestjs/config");
+const email_service_1 = require("./email.service");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [],
+        imports: [config_1.ConfigModule.forRoot()],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService, csv_service_1.CsvService, pinger_service_1.PingerService],
+        providers: [app_service_1.AppService, csv_service_1.CsvService, pinger_service_1.PingerService, email_service_1.EmailService],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
